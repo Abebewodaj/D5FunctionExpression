@@ -138,22 +138,48 @@ the console.*/
     // let res = 50;
   // let x = Math.sqrt(res);
   // console.log(x);
-  function compoundInterest(deposit: number, rate: number, years: number) {
-    const monthlyRate = rate / 12 / 100;
-    const numPayments = years * 12;
-    let balance = deposit;
+  // function compoundInterest(deposit: number, rate: number, years: number) {
+  //   const monthlyRate = rate / 12 / 100;
+  //   const numPayments = years * 12;
+  //   let balance = deposit;
   
-    for (let i = 1; i <= numPayments; i++) { 
-      balance = balance + balance * monthlyRate;
-      debugger;
+  //   for (let i = 1; i <= numPayments; i++) { 
+  //     balance = balance + balance * monthlyRate;
+  //     debugger;
+  //   }
+  
+  //   return balance;
+  // }
+  
+  // const result1 = compoundInterest(100, 10, 1);
+  // console.log("expect 110.47:", result1);
+  
+  // const result2 = compoundInterest(10000, 5, 10);
+  // console.log("expect 16470.09:", result2);
+//   function findAverage(arr: number[]): number {
+//     let sum: number = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+
+//     let average: number = sum / arr.length;
+//     return average;
+// }
+
+// console.log(findAverage([10, 20, 30, 40, 50])); 
+
+ function sumMatrix (arr:number [][]):number{
+   let sum:number = 0;
+  for (let i = 0; i <  arr.length; i++) {
+    for (let j = 0; j <  arr[i].length; j++) {
+        sum +=arr[i][j]
+     
     }
-  
-    return balance;
-  }
-  
-  const result1 = compoundInterest(100, 10, 1);
-  console.log("expect 110.47:", result1);
-  
-  const result2 = compoundInterest(10000, 5, 10);
-  console.log("expect 16470.09:", result2);
-  
+}
+return sum;
+
+
+ }
+ const matrix=[[1,2,3], [4,5,6],[7,8,9]];
+ console.log(sumMatrix(matrix));
